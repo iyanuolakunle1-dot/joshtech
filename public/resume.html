@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joshua Olakunle - Full Stack Software Engineer CV</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+    
+    @page {
+      size: A4;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #1e293b;
+      background: #ffffff;
+      line-height: 1.45;
+      font-size: 9.5pt;
+    }
+
+    .header {
+      border-bottom: 2px solid #4f46e5;
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .header-left h1 {
+      font-size: 22pt;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    .header-left h2 {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #4f46e5;
+      margin-top: 3px;
+      letter-spacing: 0.2px;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 8.5pt;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    .header-right a {
+      color: #4f46e5;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .section {
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #0f172a;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 12px;
+      background: #4f46e5;
+      border-radius: 2px;
+    }
+
+    p.summary {
+      font-size: 9pt;
+      color: #334155;
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px 14px;
+      font-size: 8.5pt;
+    }
+
+    .skill-item {
+      display: flex;
+      gap: 6px;
+    }
+
+    .skill-label {
+      font-weight: 700;
+      color: #1e293b;
+      min-width: 110px;
+    }
+
+    .skill-val {
+      color: #475569;
+    }
+
+    .item {
+      margin-bottom: 9px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .item-title {
+      font-weight: 700;
+      font-size: 9.5pt;
+      color: #0f172a;
+    }
+
+    .item-company {
+      color: #4f46e5;
+      font-weight: 600;
+    }
+
+    .item-date {
+      font-size: 8.5pt;
+      color: #64748b;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .item-tagline {
+      font-size: 8.5pt;
+      font-style: italic;
+      color: #475569;
+      margin-bottom: 3px;
+    }
+
+    ul.bullets {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul.bullets li {
+      position: relative;
+      padding-left: 12px;
+      margin-bottom: 2px;
+      font-size: 8.5pt;
+      color: #334155;
+    }
+
+    ul.bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 2px;
+      color: #4f46e5;
+      font-weight: bold;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 12px;
+    }
+
+    .project-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 7px 9px;
+    }
+
+    .project-card-title {
+      font-weight: 700;
+      font-size: 9pt;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+
+    .project-badge {
+      font-size: 7pt;
+      background: #e0e7ff;
+      color: #4338ca;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .project-tech {
+      font-size: 7.5pt;
+      font-family: 'JetBrains Mono', monospace;
+      color: #4f46e5;
+      margin-bottom: 3px;
+    }
+
+    .project-desc {
+      font-size: 8pt;
+      color: #475569;
+      line-height: 1.35;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <h1>Joshua Olakunle</h1>
+      <h2>Full Stack Software Engineer</h2>
+    </div>
+    <div class="header-right">
+      <div>📞 <strong>+234 704 008 7040</strong> (WhatsApp &amp; Calls)</div>
+      <div>📧 <a href="mailto:iyanuolakunle1@gmail.com">iyanuolakunle1@gmail.com</a></div>
+      <div>💻 <a href="https://github.com/iyanuolakunle1-dot">github.com/iyanuolakunle1-dot</a></div>
+      <div>📍 Ogun State, Nigeria • Open to Remote &amp; Global Roles</div>
+    </div>
+  </div>
+
+  <!-- Professional Summary -->
+  <div class="section">
+    <div class="section-title">Professional Summary</div>
+    <p class="summary">
+      Results-driven <strong>Full Stack Software Engineer</strong> with extensive experience architecting and shipping production-grade multi-portal web applications, SaaS platforms, and secure RESTful APIs. Specializes in building modern React frontends with Tailwind CSS alongside scalable Node.js/Express backends, PostgreSQL schemas with automated database triggers, and Supabase Row-Level Security. Shipped 8+ end-to-end full stack web platforms across healthcare, hospitality, education, real-time collaboration, and e-commerce.
+    </p>
+  </div>
+
+  <!-- Technical Skills -->
+  <div class="section">
+    <div class="section-title">Technical Expertise</div>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <span class="skill-label">Languages:</span>
+        <span class="skill-val">JavaScript (ES6+), TypeScript, PHP, SQL, HTML5, CSS3/Sass</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">Frontend UI:</span>
+        <span class="skill-val">React.js, Vite, Next.js, Tailwind CSS, Framer Motion, Bootstrap</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">Backend &amp; APIs:</span>
+        <span class="skill-val">Node.js, Express.js, RESTful APIs, WebSockets, JWT Auth, Middleware</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">Databases &amp; Storage:</span>
+        <span class="skill-val">PostgreSQL, Supabase (RLS), MySQL, Prisma ORM, Cloudinary CDN</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">Architecture:</span>
+        <span class="skill-val">Multi-Portal RBAC, Database Triggers, State Management, Responsive Design</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-label">DevOps &amp; Tools:</span>
+        <span class="skill-val">Git, GitHub, Postman, VS Code, Vercel, Render, CI/CD Fundamentals</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Production Projects -->
+  <div class="section">
+    <div class="section-title">Featured Production Applications</div>
+    <div class="project-grid">
+      
+      <div class="project-card">
+        <div class="project-card-title">
+          <span>Luxora Hotels &amp; Resorts</span>
+          <span class="project-badge">Hospitality SaaS</span>
+        </div>
+        <div class="project-tech">React · Vite · Node.js · Express · Supabase · PostgreSQL</div>
+        <div class="project-desc">Full-stack hotel management platform connecting public room booking, guest self-service portal, and operations dashboard with automated checkout triggers.</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-title">
+          <span>Clinexa Healthcare</span>
+          <span class="project-badge">Enterprise Health</span>
+        </div>
+        <div class="project-tech">React · Node.js · Express · Supabase · PostgreSQL · Cloudinary</div>
+        <div class="project-desc">Synchronized hospital ecosystem across 9 authenticated portals (Doctor, Patient, Lab, Pharmacy, Admin) with strict Row-Level Security.</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-title">
+          <span>Academora</span>
+          <span class="project-badge">School Management</span>
+        </div>
+        <div class="project-tech">React · Tailwind CSS · Node.js · Express · Supabase</div>
+        <div class="project-desc">Unified institution suite coordinating 6 authenticated portals (Student, Teacher, Parent, Admin, Library) for grading, admissions, and tuition billing.</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-title">
+          <span>PrepDeck</span>
+          <span class="project-badge">EdTech CBT</span>
+        </div>
+        <div class="project-tech">React · Framer Motion · Node.js · Express · Supabase</div>
+        <div class="project-desc">Full-stack Computer-Based Test practice platform for JAMB &amp; WAEC candidates with 13 subjects, timed mock sessions, and live leaderboard.</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-title">
+          <span>LinkUp</span>
+          <span class="project-badge">Real-Time Chat</span>
+        </div>
+        <div class="project-tech">React · Node.js · Express · WebSockets / Socket.io · PostgreSQL</div>
+        <div class="project-desc">High-speed real-time messaging application supporting 1-on-1 DMs, group channels, live member presence, typing indicators, and attachments.</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-title">
+          <span>ShopSphere</span>
+          <span class="project-badge">E-Commerce</span>
+        </div>
+        <div class="project-tech">React · Vite · Tailwind CSS · Node.js · REST API</div>
+        <div class="project-desc">High-performance modern e-commerce storefront with instant product search, dynamic filtering, persistent cart, and streamlined checkout.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Professional Experience -->
+  <div class="section">
+    <div class="section-title">Professional Experience</div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Full Stack Software Developer</span>
+        <span class="item-date">2024 — Present</span>
+      </div>
+      <div class="item-tagline">Independent Solutions &amp; Client Projects</div>
+      <ul class="bullets">
+        <li>Designed and deployed 8+ responsive, high-performance web applications and multi-portal SaaS platforms.</li>
+        <li>Architected secure RESTful APIs with JWT authentication, role-based access control (RBAC), and database indexing.</li>
+        <li>Collaborated with clients to translate operational workflows into automated, production-ready software solutions.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Backend &amp; API Developer</span>
+        <span class="item-date">2023 — 2024</span>
+      </div>
+      <div class="item-tagline">Software Development Projects</div>
+      <ul class="bullets">
+        <li>Built robust backend services with Node.js and Express; engineered PostgreSQL relational schemas and automated triggers.</li>
+        <li>Integrated WebSockets for real-time bidirectional communication and Cloudinary for media asset management.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span class="item-title">Frontend Developer</span>
+        <span class="item-date">2022 — 2023</span>
+      </div>
+      <div class="item-tagline">Independent Web Development</div>
+      <ul class="bullets">
+        <li>Engineered responsive, accessible user interfaces using React, Tailwind CSS, JavaScript (ES6+), and Framer Motion.</li>
+        <li>Optimized client-side rendering, component reusability, and mobile-first responsive layouts.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>

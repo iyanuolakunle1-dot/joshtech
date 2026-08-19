@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg-light text-slate-900 dark:bg-bg dark:text-slate-100 font-body antialiased transition-colors duration-300;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight text-slate-900 dark:text-white;
+  }
+  ::selection {
+    background: rgba(79, 70, 229, 0.25);
+    color: inherit;
+  }
+  :focus-visible {
+    outline: 2px solid #4F46E5;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.25);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.45);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-xl border;
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(226, 232, 240, 0.8);
+  }
+  .dark .glass {
+    background: rgba(17, 23, 38, 0.82);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-light via-indigo-400 to-blue-500 dark:from-indigo-300 dark:via-primary-light dark:to-sky-300;
+  }
+  .btn-glow {
+    box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.3);
+    transition: all 0.25s ease;
+  }
+  .btn-glow:hover {
+    box-shadow: 0 6px 20px 0 rgba(79, 70, 229, 0.45);
+    transform: translateY(-1px);
+  }
+  .section-eyebrow {
+    @apply font-mono text-xs tracking-[0.2em] uppercase text-primary dark:text-indigo-400 font-semibold;
+  }
+  .card-base {
+    @apply rounded-2xl border border-slate-200/90 dark:border-slate-800/80 bg-white dark:bg-surface/90 backdrop-blur-md shadow-sm transition-all duration-300;
+  }
+  .muted {
+    @apply text-slate-600 dark:text-slate-400;
+  }
+
+  .project-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #6366f1 rgba(148, 163, 184, 0.15);
+  }
+  .project-scrollbar::-webkit-scrollbar {
+    height: 8px;
+  }
+  .project-scrollbar::-webkit-scrollbar-track {
+    background: rgba(148, 163, 184, 0.12);
+    border-radius: 9999px;
+  }
+  .project-scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #4f46e5, #6366f1, #38bdf8);
+    border-radius: 9999px;
+  }
+  .project-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #4338ca, #4f46e5, #0284c7);
+  }
+}
+
