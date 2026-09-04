@@ -131,12 +131,12 @@ export default function Projects() {
                     {/* Quick Live Preview Floating Button on hover */}
                     <div className="absolute inset-0 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-slate-950/40 backdrop-blur-[2px]">
                       <a
-                        href={project.live}
+                        href={project.swagger || project.live}
                         target="_blank"
                         rel="noreferrer"
                         className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-dark text-white text-xs font-semibold shadow-lg transition-transform hover:scale-105"
                       >
-                        <ExternalLink size={13} /> Live Demo
+                        <ExternalLink size={13} /> {project.swagger || project.live?.includes('swagger') ? 'Swagger API' : 'Live Demo'}
                       </a>
                       <a
                         href={project.github}
@@ -210,12 +210,12 @@ export default function Projects() {
                         </a>
 
                         <a
-                          href={project.live}
+                          href={project.swagger || project.live}
                           target="_blank"
                           rel="noreferrer"
                           className="inline-flex items-center gap-1 text-xs font-semibold text-white bg-primary hover:bg-primary-dark px-3 py-1.5 rounded-lg shadow-sm transition-all"
                         >
-                          <span>Live</span>
+                          <span>{project.swagger || project.live?.includes('swagger') ? 'Swagger' : 'Live'}</span>
                           <ExternalLink size={12} />
                         </a>
                       </div>

@@ -1,5 +1,6 @@
 export const typingRoles = [
   'Full Stack Developer',
+  'Python & Django Developer',
   'Frontend Specialist',
   'Backend & API Architect',
   'React & Node.js Developer',
@@ -11,7 +12,7 @@ export const skillGroups = [
   {
     title: 'Languages',
     gradient: 'from-primary to-secondary',
-    items: ['JavaScript (ES6+)', 'TypeScript', 'PHP', 'HTML5', 'CSS3 / Sass', 'SQL'],
+    items: ['Python', 'JavaScript (ES6+)', 'TypeScript', 'PHP', 'HTML5', 'CSS3 / Sass', 'SQL'],
   },
   {
     title: 'Frontend Frameworks & UI',
@@ -21,31 +22,69 @@ export const skillGroups = [
   {
     title: 'Backend & APIs',
     gradient: 'from-primary to-secondary',
-    items: ['Node.js', 'Express.js', 'RESTful APIs', 'WebSockets', 'JWT Auth', 'Middleware'],
+    items: ['Python', 'Django', 'Django REST Framework', 'Node.js', 'Express.js', 'RESTful APIs', 'drf-spectacular', 'JWT Auth', 'WebSockets'],
   },
   {
     title: 'Databases & Storage',
     gradient: 'from-primary to-secondary',
-    items: ['PostgreSQL', 'Supabase', 'MySQL', 'Prisma ORM', 'Cloudinary CDN'],
+    items: ['PostgreSQL', 'Supabase', 'MySQL', 'SQLite', 'Prisma ORM', 'Cloudinary CDN'],
   },
   {
     title: 'DevOps, Tools & Deployment',
     gradient: 'from-primary to-secondary',
-    items: ['Git & GitHub', 'VS Code', 'Postman', 'Vercel', 'Render', 'CI/CD Basics'],
+    items: ['Git & GitHub', 'Swagger / OpenAPI', 'Postman', 'Render', 'Vercel', 'Gunicorn & WhiteNoise', 'CI/CD Basics'],
   },
 ]
 
 export const projectCategories = [
   'All',
-  'SaaS & Full Stack',
+  'Fintech & SaaS',
+  'API & Backend',
   'Healthcare & EdTech',
   'E-Commerce & Chat',
 ]
 
 export const projects = [
   {
+    name: 'UmePay',
+    category: 'Fintech & SaaS',
+    tagline: 'Modern Cross-Border Payments & Multi-Currency Digital Wallet Platform',
+    image: '/projects/umepay.png',
+    description:
+      'High-performance fintech web application engineered for instant multi-currency transactions (USD & NGN), seamless bank transfers, QR payments, bill settlements, currency conversion, KYC identity verification, and multi-tier security with PIN authorization.',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'REST API', 'JavaScript', 'Responsive UI'],
+    features: [
+      'Multi-currency digital wallet with real-time conversion and rate calculation',
+      'Instant peer-to-peer transfers, bank rails, and QR code scan & pay',
+      '4-step biometric & KYC identity verification with secure onboarding flow',
+      'Transaction history filtering, receipt generation, and PIN-secured checkouts',
+    ],
+    github: 'https://github.com/iyanuolakunle1-dot/umepay',
+    live: 'https://github.com/iyanuolakunle1-dot/umepay',
+    badge: 'Fintech Platform',
+  },
+  {
+    name: 'Django REST API & Swagger UI',
+    category: 'API & Backend',
+    tagline: 'Enterprise Django REST Framework Platform with OpenAPI 3.0 & Swagger UI',
+    image: '/projects/iyanu-blog.png',
+    description:
+      'Robust and scalable RESTful API backend platform developed with Python and Django REST Framework. Features SimpleJWT authentication, full CRUD operations for posts, comments, and likes, django-filter search capabilities, custom user models, and interactive live OpenAPI 3.0 Swagger and ReDoc documentation.',
+    tech: ['Python', 'Django', 'Django REST Framework', 'drf-spectacular', 'Swagger UI', 'PostgreSQL', 'SimpleJWT', 'WhiteNoise'],
+    features: [
+      'Interactive Swagger UI & ReDoc live browser documentation at /api/swagger/',
+      'JWT Authentication suite with register, token pair generation, and refresh cycle',
+      'Full CRUD APIs for posts, threaded comments, and user likes with pagination',
+      'PostgreSQL production architecture with WhiteNoise static storage & Gunicorn',
+    ],
+    github: 'https://github.com/iyanuolakunle1-dot/iyanu-blog',
+    live: 'https://iyanu-blog.onrender.com/api/swagger/',
+    swagger: 'https://iyanu-blog.onrender.com/api/swagger/',
+    badge: 'Python & Django API',
+  },
+  {
     name: 'Luxora Hotels & Resorts',
-    category: 'SaaS & Full Stack',
+    category: 'Fintech & SaaS',
     tagline: 'Luxury Hospitality & Multi-Portal Hotel Management Platform',
     image: '/projects/luxora.jpg',
     description:
@@ -135,7 +174,7 @@ export const projects = [
   },
   {
     name: 'FoodVerse',
-    category: 'SaaS & Full Stack',
+    category: 'Fintech & SaaS',
     tagline: 'Delicious Food, Delivered Fast — Online Food Ordering Platform',
     image: '/projects/foodverse.png',
     description:
@@ -171,7 +210,7 @@ export const projects = [
   },
   {
     name: 'BuzzHive',
-    category: 'SaaS & Full Stack',
+    category: 'Fintech & SaaS',
     tagline: 'Share Stories. Connect People — Modern Social Platform',
     image: '/projects/buzzhive.jpg',
     description:
@@ -195,12 +234,16 @@ export const services = [
     desc: 'End-to-end web apps crafted from database schema and backend APIs to polished, accessible client interfaces.',
   },
   {
+    title: 'Python & Django API Engineering',
+    desc: 'Scalable RESTful microservices, JWT authentication workflows, and interactive OpenAPI / Swagger documentation built with Django and DRF.',
+  },
+  {
     title: 'Frontend & UI Engineering',
     desc: 'High-performance, responsive UIs built with React, Vite, Tailwind CSS, and Framer Motion micro-interactions.',
   },
   {
-    title: 'Backend & RESTful API Architecture',
-    desc: 'Secure, clean, and scalable REST APIs and service layers developed with Node.js, Express, and PHP.',
+    title: 'Backend & RESTful Architecture',
+    desc: 'Secure, clean, and scalable REST APIs and service layers developed with Node.js, Express, Python, Django, and PHP.',
   },
   {
     title: 'Multi-Portal & SaaS Systems',
@@ -208,26 +251,22 @@ export const services = [
   },
   {
     title: 'Database Design & Optimization',
-    desc: 'Structured data schemas, indexing, and migrations designed across PostgreSQL, Supabase, MySQL, and Prisma.',
-  },
-  {
-    title: 'Real-Time & Media Integrations',
-    desc: 'Live WebSockets communication, Cloudinary asset storage, and third-party API service integrations.',
+    desc: 'Structured data schemas, indexing, and migrations designed across PostgreSQL, Supabase, MySQL, SQLite, and Prisma.',
   },
 ]
 
 export const experience = [
   {
     year: '2024 — Present',
-    role: 'Full Stack Web Developer',
+    role: 'Full Stack & Backend Engineer',
     org: 'Independent Projects & Client Solutions',
-    desc: 'Building and shipping production-ready web apps across hospitality (Luxora), healthcare (Clinexa), education (PrepDeck, Academora), e-commerce (ShopSphere), and real-time platforms.',
+    desc: 'Building and shipping production-ready web apps and APIs across fintech (UmePay), Python/Django APIs (Blog Swagger), hospitality (Luxora), healthcare (Clinexa), education (PrepDeck, Academora), and real-time platforms.',
   },
   {
     year: '2023 — 2024',
     role: 'Backend & API Developer',
     org: 'Independent Projects',
-    desc: 'Engineered REST APIs, authentication layers, PostgreSQL schemas, and database triggers powering multi-portal web applications.',
+    desc: 'Engineered REST APIs in Python (Django DRF) and Node.js (Express), JWT auth layers, PostgreSQL schemas, and database triggers powering multi-portal web applications.',
   },
   {
     year: '2022 — 2023',
@@ -239,16 +278,16 @@ export const experience = [
     year: '2021 — 2022',
     role: 'Foundations & Self-Directed Growth',
     org: 'Software Development',
-    desc: 'Mastered core modern web fundamentals — HTML5, CSS3, JavaScript (ES6+), PHP, and SQL — building hands-on projects and problem solving.',
+    desc: 'Mastered core modern web fundamentals — Python, JavaScript (ES6+), PHP, HTML5/CSS3, and SQL — building hands-on projects and problem solving.',
   },
 ]
 
 export const stats = [
-  { label: 'Featured Projects', value: 8, suffix: '+' },
-  { label: 'Portals & Systems', value: 20, suffix: '+' },
-  { label: 'Technologies & Tools', value: 16, suffix: '+' },
+  { label: 'Featured Projects', value: 10, suffix: '+' },
+  { label: 'Portals & Systems', value: 24, suffix: '+' },
+  { label: 'Technologies & Tools', value: 18, suffix: '+' },
   { label: 'Years of Development', value: 4, suffix: '+' },
-  { label: 'Full Stack Deployments', value: 10, suffix: '+' },
+  { label: 'Full Stack & API Deployments', value: 12, suffix: '+' },
 ]
 
 export const socials = {
@@ -261,4 +300,3 @@ export const socials = {
   whatsappUrl: 'https://wa.me/2347040087040?text=Hi%20Joshua,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20hire%20you%20for%20a%20project!',
   location: 'Sango-Ota, Ogun State, Nigeria',
 }
-
