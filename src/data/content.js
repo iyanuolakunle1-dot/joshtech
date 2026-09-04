@@ -38,31 +38,13 @@ export const skillGroups = [
 
 export const projectCategories = [
   'All',
-  'Fintech & SaaS',
   'API & Backend',
+  'SaaS & Full Stack',
   'Healthcare & EdTech',
   'E-Commerce & Chat',
 ]
 
 export const projects = [
-  {
-    name: 'UmePay',
-    category: 'Fintech & SaaS',
-    tagline: 'Modern Cross-Border Payments & Multi-Currency Digital Wallet Platform',
-    image: '/projects/umepay.png',
-    description:
-      'High-performance fintech web application engineered for instant multi-currency transactions (USD & NGN), seamless bank transfers, QR payments, bill settlements, currency conversion, KYC identity verification, and multi-tier security with PIN authorization.',
-    tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'REST API', 'JavaScript', 'Responsive UI'],
-    features: [
-      'Multi-currency digital wallet with real-time conversion and rate calculation',
-      'Instant peer-to-peer transfers, bank rails, and QR code scan & pay',
-      '4-step biometric & KYC identity verification with secure onboarding flow',
-      'Transaction history filtering, receipt generation, and PIN-secured checkouts',
-    ],
-    github: 'https://github.com/iyanuolakunle1-dot/umepay',
-    live: 'https://github.com/iyanuolakunle1-dot/umepay',
-    badge: 'Fintech Platform',
-  },
   {
     name: 'Django REST API & Swagger UI',
     category: 'API & Backend',
@@ -84,7 +66,7 @@ export const projects = [
   },
   {
     name: 'Luxora Hotels & Resorts',
-    category: 'Fintech & SaaS',
+    category: 'SaaS & Full Stack',
     tagline: 'Luxury Hospitality & Multi-Portal Hotel Management Platform',
     image: '/projects/luxora.jpg',
     description:
@@ -174,7 +156,7 @@ export const projects = [
   },
   {
     name: 'FoodVerse',
-    category: 'Fintech & SaaS',
+    category: 'SaaS & Full Stack',
     tagline: 'Delicious Food, Delivered Fast — Online Food Ordering Platform',
     image: '/projects/foodverse.png',
     description:
@@ -210,7 +192,7 @@ export const projects = [
   },
   {
     name: 'BuzzHive',
-    category: 'Fintech & SaaS',
+    category: 'SaaS & Full Stack',
     tagline: 'Share Stories. Connect People — Modern Social Platform',
     image: '/projects/buzzhive.jpg',
     description:
@@ -260,7 +242,7 @@ export const experience = [
     year: '2024 — Present',
     role: 'Full Stack & Backend Engineer',
     org: 'Independent Projects & Client Solutions',
-    desc: 'Building and shipping production-ready web apps and APIs across fintech (UmePay), Python/Django APIs (Blog Swagger), hospitality (Luxora), healthcare (Clinexa), education (PrepDeck, Academora), and real-time platforms.',
+    desc: 'Building and shipping production-ready web apps and APIs across Python/Django APIs (Blog Swagger), hospitality (Luxora), healthcare (Clinexa), education (PrepDeck, Academora), and real-time platforms.',
   },
   {
     year: '2023 — 2024',
@@ -283,11 +265,11 @@ export const experience = [
 ]
 
 export const stats = [
-  { label: 'Featured Projects', value: 10, suffix: '+' },
-  { label: 'Portals & Systems', value: 24, suffix: '+' },
+  { label: 'Featured Projects', value: 9, suffix: '+' },
+  { label: 'Portals & Systems', value: 22, suffix: '+' },
   { label: 'Technologies & Tools', value: 18, suffix: '+' },
   { label: 'Years of Development', value: 4, suffix: '+' },
-  { label: 'Full Stack & API Deployments', value: 12, suffix: '+' },
+  { label: 'Full Stack & API Deployments', value: 10, suffix: '+' },
 ]
 
 export const socials = {
