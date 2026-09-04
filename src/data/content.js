@@ -46,12 +46,12 @@ export const projectCategories = [
 
 export const projects = [
   {
-    name: 'Django REST API & Swagger UI',
+    name: 'Blog API',
     category: 'API & Backend',
-    tagline: 'Enterprise Django REST Framework Platform with OpenAPI 3.0 & Swagger UI',
+    tagline: 'Django REST Blog API with JWT Authentication, Posts, Comments & Swagger UI',
     image: '/projects/iyanu-blog.png',
     description:
-      'Robust and scalable RESTful API backend platform developed with Python and Django REST Framework. Features SimpleJWT authentication, full CRUD operations for posts, comments, and likes, django-filter search capabilities, custom user models, and interactive live OpenAPI 3.0 Swagger and ReDoc documentation.',
+      'Robust and scalable RESTful Blog API backend developed with Python and Django REST Framework. Features SimpleJWT authentication, full CRUD operations for posts, threaded comments, and likes, django-filter search capabilities, custom user models, and interactive live OpenAPI 3.0 Swagger and ReDoc documentation.',
     tech: ['Python', 'Django', 'Django REST Framework', 'drf-spectacular', 'Swagger UI', 'PostgreSQL', 'SimpleJWT', 'WhiteNoise'],
     features: [
       'Interactive Swagger UI & ReDoc live browser documentation at /api/swagger/',
